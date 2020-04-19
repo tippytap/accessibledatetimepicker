@@ -23,8 +23,13 @@
     // we will fill this later
     // with public methods. This is the returned object from the regular revealing module pattern
     var defaults = {
-
+        stubVar: "",
+        initClass: "js-a11yDateTimePicker",
+        callBackBefore: function(){},
+        callBackAfter: function(){}
     };
+
+
 
 
 
