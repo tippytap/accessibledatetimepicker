@@ -59,6 +59,29 @@
         settings = null;
 
     };
+
+    //init
+    a11yDateTimePicker.init = function(config){
+
+        // feature test (look above)
+        if(!supports) return;
+
+        // Destroy for good measure
+        a11yDateTimePicker.destroy();
+
+        // Merge user opts with defaults
+        settings = bouy.extend(defaults, options || {});
+
+        document.documentElement.classList.add(settings.initClass);
+
+        //
+        // TODO other things needed
+        //
+
+        // listen for clickies
+        document.addEventListener('click', eventHandler, false);
+
+    };
     
 
 });
