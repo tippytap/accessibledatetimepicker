@@ -11,6 +11,9 @@
     // Plugin stuff...
     'use strict';
 
+    /**
+     * SETUP
+     */
     var a11yDateTimePicker = {};
 
     // !! is the truthy value. Two bangs determines the opposite of the truthy/falsy value and then reverses it
@@ -30,7 +33,32 @@
     };
 
 
+    /**
+     * METHODS
+     */
 
+    // events
+    var eventHandler = function(e){
 
+    };
+
+    // destroy
+    a11yDateTimePicker.destroy = function(){
+
+        if(!settings) return;
+
+        document.documentElement.classList.remove(settings.initClass);
+
+        //
+        // TODO undo any init work
+        //
+
+        document.removeEventListener('click', eventHandler, false);
+
+        // reset all vars
+        settings = null;
+
+    };
+    
 
 });
